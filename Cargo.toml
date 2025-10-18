@@ -9,4 +9,5 @@ name = "loopicide"
 crate-type = ["cdylib"]
 
 [dependencies]
+geo = "0.31.0"
 pyo3 = "0.25.0"
