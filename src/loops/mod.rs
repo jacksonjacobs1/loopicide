@@ -1,6 +1,5 @@
 use pyo3::prelude::*;
 mod utils;
-use utils::Point;
 use utils::PointList;
 use utils::Stack;
 
