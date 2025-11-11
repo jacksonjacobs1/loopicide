@@ -1,6 +1,6 @@
 use pyo3::prelude::*;
 mod utils;
-use utils::PointList;
+use utils::Curve;
 use utils::Stack;
 
 
@@ -12,6 +12,9 @@ pub fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
 
 #[pyfunction]
 pub fn remove_loops(points: Vec<Vec<f64>>) -> PyResult<Vec<Vec<f64>>> {
+
+    let stack = Stack::<i32>::new();
+    let loops = Vec::<Loop>::new();
 
     for first_segment_index in 0..points.len() {
         for second_segment_index in 0..points.len() {
